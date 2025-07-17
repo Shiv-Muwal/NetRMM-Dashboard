@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Sidebar from './component/Sidebar';
+import MainSidebar from './component/Sidebars/MainSidebar';
+import SubSidebar from './component/Sidebars/SubSidebar';
 import Dashboard from './component/Dashboard';
 import DeviceView from './component/DeviceView';
 import AlertsView from './component/AlertsView';
@@ -23,7 +24,13 @@ function App() {
 
   return (
     <div className="flex h-screen bg-gray-100">
-      <Sidebar activeView={activeView} setActiveView={setActiveView} />
+      {/* Sub Sidebar - Left narrow sidebar */}
+      <SubSidebar />
+      
+      {/* Main Sidebar - Main navigation */}
+      <MainSidebar activeView={activeView} setActiveView={setActiveView} />
+      
+      {/* Main Content Area */}
       <div className="flex-1 flex flex-col overflow-hidden">
         <header className="bg-white shadow-sm border-b border-gray-200 px-6 py-4">
           <div className="flex items-center justify-between">

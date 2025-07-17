@@ -4,6 +4,27 @@
   background-color: #f8fafc;
 }
 
+/* Custom color definitions */
+.bg-big-stone {
+  background-color: #1e293b;
+}
+
+.bg-bluewood {
+  background-color: #334155;
+}
+
+.border-fiord {
+  border-color: #475569;
+}
+
+.text-gray {
+  color: #6b7280;
+}
+
+.hover\:bg-blue:hover {
+  background-color: #3b82f6;
+}
+
 .sidebar-transition {
   transition: width 0.3s ease-in-out;
 }
