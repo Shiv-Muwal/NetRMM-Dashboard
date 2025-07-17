@@ -1,44 +1,23 @@
 import React from 'react';
-import { CheckCircle, AlertCircle, Info } from 'lucide-react';
+import { Icons } from './icons';
+import { recentActivities, statusConfig } from '../helpers/dashboardData';
 
 const RecentActivity = () => {
-  const activities = [
-    {
-      id: 1,
-      user: 'Rashman001',
-      action: 'Device rebooted',
-      time: '2 min ago',
-      status: 'success',
-      avatar: '/api/placeholder/32/32'
-    },
-    {
-      id: 2,
-      user: 'owlonic0',
-      action: 'User installed application',
-      time: '5 min ago',
-      status: 'info',
-      avatar: '/api/placeholder/32/32'
-    },
-    {
-      id: 3,
-      user: 'egantv v.2.13',
-      action: 'Agent updated',
-      time: '8 min ago',
-      status: 'info',
-      avatar: '/api/placeholder/32/32'
-    }
-  ];
+  // Using data from helper file
+  const activities = recentActivities;
 
   const getStatusIcon = (status) => {
     switch (status) {
       case 'success':
-        return <CheckCircle className="w-4 h-4 text-green-500" />;
+        return <Icons.CheckCircle className="w-4 h-4 text-green-500" />;
       case 'warning':
-        return <AlertCircle className="w-4 h-4 text-yellow-500" />;
+        return <Icons.AlertCircle className="w-4 h-4 text-yellow-500" />;
+      case 'error':
+        return <Icons.AlertCircle className="w-4 h-4 text-red-500" />;
       case 'info':
-        return <Info className="w-4 h-4 text-blue-500" />;
+        return <Icons.Info className="w-4 h-4 text-blue-500" />;
       default:
-        return <Info className="w-4 h-4 text-gray-500" />;
+        return <Icons.Info className="w-4 h-4 text-gray-500" />;
     }
   };
 

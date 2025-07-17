@@ -1,26 +1,20 @@
 import React from 'react'
-import {
-  CirclePlus,
-  ShieldCheck,
-  Activity,
-  Monitor,
-  Menu,
-  Settings
-} from "lucide-react";
+import { Icons } from '../icons';
+import { subSidebarItems } from '../../helpers/dashboardData';
 
 const SubSidebar = () => {
   const icons = [
-    { icon: CirclePlus, label: "Add" },
-    { icon: ShieldCheck, label: "Security" },
-    { icon: Activity, label: "Activity" },
-    { icon: Monitor, label: "Monitor" },
-    { icon: Settings, label: "Settings" }
+    { icon: Icons.CirclePlus, label: "Add" },
+    { icon: Icons.ShieldCheck, label: "Security" },
+    { icon: Icons.Activity, label: "Activity" },
+    { icon: Icons.Monitor, label: "Monitor" },
+    { icon: Icons.Settings, label: "Settings" }
   ];
 
   return (
     <div className="w-16 h-screen bg-bluewood text-white flex flex-col items-center border-r-2 border-fiord">
       <div className="p-4 shadow-2xl">
-        <Menu size={24} className="text-white" />
+        <Icons.Menu size={24} className="text-white" />
       </div>
       <span className='border-b border-fiord h-0.5 w-full block'></span>
 

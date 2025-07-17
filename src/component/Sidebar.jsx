@@ -1,28 +1,18 @@
 import React from 'react';
-import { 
-  BarChart3, 
-  AlertTriangle, 
-  Monitor, 
-  Wifi, 
-  Download, 
-  Package, 
-  Globe, 
-  FileText, 
-  Settings,
-  Menu
-} from 'lucide-react';
+import { Icons } from './icons';
+import { menuItems } from '../helpers/dashboardData';
 
 const Sidebar = ({ activeView, setActiveView }) => {
-  const menuItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: BarChart3, active: true },
-    { id: 'alerts', label: 'Alerts & Incidents', icon: AlertTriangle },
-    { id: 'devices', label: 'Devices & Endpoints', icon: Monitor },
-    { id: 'network', label: 'Network Monitoring', icon: Wifi },
-    { id: 'patch', label: 'Patch Management', icon: Download },
-    { id: 'inventory', label: 'Software Inventory', icon: Package },
-    { id: 'remote', label: 'Remote Access', icon: Globe },
-    { id: 'reports', label: 'Reports & Analytics', icon: FileText },
-    { id: 'settings', label: 'Settings', icon: Settings },
+  const sidebarMenuItems = [
+    { id: 'dashboard', label: 'Dashboard', icon: Icons.BarChart3, active: true },
+    { id: 'alerts', label: 'Alerts & Incidents', icon: Icons.AlertTriangle },
+    { id: 'devices', label: 'Devices & Endpoints', icon: Icons.Monitor },
+    { id: 'network', label: 'Network Monitoring', icon: Icons.Wifi },
+    { id: 'patch', label: 'Patch Management', icon: Icons.Download },
+    { id: 'inventory', label: 'Software Inventory', icon: Icons.Package },
+    { id: 'remote', label: 'Remote Access', icon: Icons.Globe },
+    { id: 'reports', label: 'Reports & Analytics', icon: Icons.FileText },
+    { id: 'settings', label: 'Settings', icon: Icons.Settings },
   ];
 
   return (
@@ -31,7 +21,7 @@ const Sidebar = ({ activeView, setActiveView }) => {
       <div className="p-6 border-b border-slate-700">
         <div className="flex items-center space-x-3">
           <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-            <Menu className="w-5 h-5" />
+            <Icons.Menu className="w-5 h-5" />
           </div>
           <h1 className="text-xl font-semibold">NetRMM</h1>
         </div>
@@ -40,7 +30,7 @@ const Sidebar = ({ activeView, setActiveView }) => {
       {/* Navigation */}
       <nav className="flex-1 p-4">
         <ul className="space-y-2">
-          {menuItems.map((item) => {
+          {sidebarMenuItems.map((item) => {
             const Icon = item.icon;
             const isActive = item.id === 'dashboard' && activeView === 'dashboard';
             

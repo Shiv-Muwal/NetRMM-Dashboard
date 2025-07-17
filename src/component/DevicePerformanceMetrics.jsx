@@ -1,4 +1,6 @@
 import React from 'react';
+import { ChartComponents, CustomIcons } from './icons';
+import { devicePerformanceData } from '../helpers/dashboardData';
 
 const DevicePerformanceMetrics = () => {
   const LineChart = ({ data, color = '#3B82F6' }) => {
