@@ -32,17 +32,18 @@ const MainSidebar = ({ activeView, setActiveView }) => {
       <div className="pb-4 border-b border-fiord mb-4">
         <h1 className="text-xl font-bold">NetRMM</h1>
       </div>
-      
-      <nav className="flex-1">
+
+      <nav className="flex-">
         {menuItems.map(({ id, icon: Icon, label }) => (
-          <button 
-            key={id} 
+          <button
+            key={id}
             onClick={() => setActiveView && setActiveView(id)}
-            className={`flex items-center gap-3 text-left p-4 w-full rounded-lg transition-colors hover:bg-blue ${
-              activeView === id ? 'bg-blue text-white' : 'text-gray hover:text-white'
-            }`}
+            className={`flex items-center gap-3 text-left p-4 w-full rounded-lg transition-colors ${activeView === id
+                ? 'bg-blue text-white'
+                : 'text-gray-400 hover:bg-blue hover:text-white'
+              }`}
           >
-            <Icon size={20} className={activeView === id ? 'text-white' : 'text-gray-400'} />
+            <Icon size={20} />
             <span>{label}</span>
           </button>
         ))}
