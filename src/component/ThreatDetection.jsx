@@ -1,5 +1,6 @@
 import React from 'react';
-import { CheckCircle, Shield } from 'lucide-react';
+import { Icons, CustomIcons } from './icons';
+import { threatDetectionData } from '../helpers/dashboardData';
 
 const ThreatDetection = () => {
   return (

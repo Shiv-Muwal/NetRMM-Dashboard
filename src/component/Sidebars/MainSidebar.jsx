@@ -1,30 +1,19 @@
 import React from 'react'
-
-import {
-  SquareChevronRight,
-  Server,
-  BellRing,
-  ShieldCheck,
-  Cpu,
-  MonitorSmartphone,
-  Settings,
-  LogOut,
-  BarChart3,
-  MonitorUp
-} from "lucide-react";
+import { Icons } from '../icons';
+import { mainSidebarItems } from '../../helpers/dashboardData';
 
 const MainSidebar = ({ activeView, setActiveView }) => {
   const menuItems = [
-    { id: 'dashboard', icon: SquareChevronRight, label: "Dashboard" },
-    { id: 'alerts', icon: Server, label: "Alerts & Incidents" },
-    { id: 'device', icon: BellRing, label: "Devices & Endpoints" },
-    { id: 'network', icon: ShieldCheck, label: "Network Monitoring" },
-    { id: 'patch', icon: Cpu, label: "Patch Management" },
-    { id: 'inventory', icon: MonitorSmartphone, label: "Software Inventory" },
-    { id: 'remote', icon: MonitorUp, label: "Remote Access" },
-    { id: 'reports', icon: BarChart3, label: "Reports & Analytics" },
-    { id: 'settings', icon: Settings, label: "Settings" },
-    { id: 'logout', icon: LogOut, label: "Logout" },
+    { id: 'dashboard', icon: Icons.SquareChevronRight, label: "Dashboard" },
+    { id: 'alerts', icon: Icons.Server, label: "Alerts & Incidents" },
+    { id: 'device', icon: Icons.BellRing, label: "Devices & Endpoints" },
+    { id: 'network', icon: Icons.ShieldCheck, label: "Network Monitoring" },
+    { id: 'patch', icon: Icons.Cpu, label: "Patch Management" },
+    { id: 'inventory', icon: Icons.MonitorSmartphone, label: "Software Inventory" },
+    { id: 'remote', icon: Icons.MonitorUp, label: "Remote Access" },
+    { id: 'reports', icon: Icons.BarChart3, label: "Reports & Analytics" },
+    { id: 'settings', icon: Icons.Settings, label: "Settings" },
+    { id: 'logout', icon: Icons.LogOut, label: "Logout" },
   ];
 
   return (
