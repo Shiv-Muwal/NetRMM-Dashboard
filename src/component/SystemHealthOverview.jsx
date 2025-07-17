@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChartComponents, CustomIcons } from './icons';
+import { ChartComponents, CustomIcons } from '../components/icons';
 import { systemHealthData } from '../helpers/dashboardData';
 
 const SystemHealthOverview = () => {

@@ -9,10 +9,8 @@ import {
 } from '../helpers/dashboardData';
 import { 
   devicesData, 
-  networkDevices, 
   locationsData,
-  getDeviceStatusColor,
-  formatUptime
+  getDeviceStatusColor
 } from '../helpers/deviceData';
 
 // Example component showing how to use the new structure

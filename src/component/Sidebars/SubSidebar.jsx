@@ -1,6 +1,5 @@
 import React from 'react'
-import { Icons } from '../icons';
-import { subSidebarItems } from '../../helpers/dashboardData';
+import { Icons } from '../../components/icons';
 
 const SubSidebar = () => {
   const icons = [
@@ -19,13 +18,13 @@ const SubSidebar = () => {
       <span className='border-b border-fiord h-0.5 w-full block'></span>
 
       <div className="p-1 flex flex-col">
-        {icons.map(({ icon: Icon, label }, i) => (
+        {icons.map(({ icon: _IconComponent, label }, i) => (
           <button
             key={i}
             title={label}
             className="rounded-md hover:bg-blue transition-colors p-4 group"
           >
-            <Icon size={24} className="text-gray-400 hover:text-white transition-colors group-hover:text-white" />
+            <_IconComponent size={24} className="text-gray-400 hover:text-white transition-colors group-hover:text-white" />
           </button>
         ))}
       </div>

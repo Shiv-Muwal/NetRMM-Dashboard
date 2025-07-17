@@ -1,6 +1,6 @@
 import React from 'react';
-import { Icons } from './icons';
-import { recentActivities, statusConfig } from '../helpers/dashboardData';
+import { Icons } from '../components/icons';
+import { recentActivities } from '../helpers/dashboardData';
 
 const RecentActivity = () => {
   // Using data from helper file

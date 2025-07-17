@@ -1,6 +1,5 @@
 import React from 'react';
-import { Icons, CustomIcons } from './icons';
-import { threatDetectionData } from '../helpers/dashboardData';
+import { Icons, CustomIcons } from '../components/icons';
 
 const ThreatDetection = () => {
   return (

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Icons } from './icons';
-import { menuItems } from '../helpers/dashboardData';
+import { Icons } from '../components/icons';
 
 const Sidebar = ({ activeView, setActiveView }) => {
   const sidebarMenuItems = [

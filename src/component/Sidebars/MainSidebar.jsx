@@ -1,6 +1,5 @@
 import React from 'react'
-import { Icons } from '../icons';
-import { mainSidebarItems } from '../../helpers/dashboardData';
+import { Icons } from '../../components/icons';
 
 const MainSidebar = ({ activeView, setActiveView }) => {
   const menuItems = [
@@ -23,7 +22,7 @@ const MainSidebar = ({ activeView, setActiveView }) => {
       </div>
 
       <nav className="flex-">
-        {menuItems.map(({ id, icon: Icon, label }) => (
+        {menuItems.map(({ id, icon: _IconComponent, label }) => (
           <button
             key={id}
             onClick={() => setActiveView && setActiveView(id)}
@@ -32,7 +31,7 @@ const MainSidebar = ({ activeView, setActiveView }) => {
                 : 'text-gray-400 hover:bg-blue hover:text-white'
               }`}
           >
-            <Icon size={20} />
+            <_IconComponent size={20} />
             <span>{label}</span>
           </button>
         ))}
