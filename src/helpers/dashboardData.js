@@ -166,7 +166,6 @@ export const mainSidebarItems = [
   { id: 'remote', label: "Remote Access" },
   { id: 'reports', label: "Reports & Analytics" },
   { id: 'settings', label: "Settings" },
-  { id: 'logout', label: "Logout" }
 ];
 
 // Sub Sidebar Icons

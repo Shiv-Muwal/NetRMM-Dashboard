@@ -12,7 +12,6 @@ const MainSidebar = ({ activeView, setActiveView }) => {
     { id: 'remote', icon: Icons.MonitorUp, label: "Remote Access" },
     { id: 'reports', icon: Icons.BarChart3, label: "Reports & Analytics" },
     { id: 'settings', icon: Icons.Settings, label: "Settings" },
-    { id: 'logout', icon: Icons.LogOut, label: "Logout" },
   ];
 
   return (
@@ -27,8 +26,8 @@ const MainSidebar = ({ activeView, setActiveView }) => {
             key={id}
             onClick={() => setActiveView && setActiveView(id)}
             className={`flex items-center gap-3 text-left p-4 w-full rounded-lg transition-colors ${activeView === id
-                ? 'bg-blue text-white'
-                : 'text-gray-400 hover:bg-blue hover:text-white'
+                ? 'bg-blue-600 text-white'
+                : 'text-gray-400 hover:text-white'
               }`}
           >
             <_IconComponent size={20} />
