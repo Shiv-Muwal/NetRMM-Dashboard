@@ -22,7 +22,7 @@ const SubSidebar = () => {
           <button
             key={i}
             title={label}
-            className="rounded-md hover:bg-blue transition-colors p-4 group"
+            className="rounded-md hover:bg-blue transition-colors p-4 group cursor-pointer"
           >
             <_IconComponent size={24} className="text-gray-400 hover:text-white transition-colors group-hover:text-white" />
           </button>

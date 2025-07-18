@@ -25,7 +25,7 @@ const MainSidebar = ({ activeView, setActiveView }) => {
           <button
             key={id}
             onClick={() => setActiveView && setActiveView(id)}
-            className={`flex items-center gap-3 text-left p-4 w-full rounded-lg transition-colors ${activeView === id
+            className={`flex items-center cursor-pointer gap-3 text-left p-4 w-full rounded-lg transition-colors ${activeView === id
                 ? 'bg-blue-600 text-white'
                 : 'text-gray-400 hover:text-white'
               }`}
