@@ -1,5 +1,6 @@
 import React from 'react';
 import { Icons, CustomIcons } from '../components/icons';
+import { CheckCircle } from 'lucide-react';
 
 const ThreatDetection = () => {
   return (

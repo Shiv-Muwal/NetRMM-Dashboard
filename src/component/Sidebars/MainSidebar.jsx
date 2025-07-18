@@ -21,7 +21,7 @@ const MainSidebar = ({ activeView, setActiveView }) => {
         <h1 className="text-xl font-bold">NetRMM</h1>
       </div>
 
-      <nav className="flex-">
+      <nav className="flex flex-col overflow-y-auto scrolbarhide">
         {menuItems.map(({ id, icon: _IconComponent, label }) => (
           <button
             key={id}
